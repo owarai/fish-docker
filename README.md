@@ -7,7 +7,8 @@ Abbreviations and completions for [`docker`](https://docker.com) for the [fish s
 Using [`fisher`](https://github.com/jorgebucaran/fisher):
 
 ```fish
-fisher add lewisacidic/fish-docker
+# ensure fisher version >= 3.x
+fisher install owarai/fish-docker
 ```
 
 ## Usage
@@ -222,5 +223,5 @@ abbreviation | result
 To update the completions, run
 
 ```
-fish scripts/update-completions.fish
+__fish-docker_update_completions
 ```
