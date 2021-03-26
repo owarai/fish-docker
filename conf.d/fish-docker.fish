@@ -5,7 +5,7 @@ function _fish-docker_install --on-event fish-docker_install
 end
 
 function __fish-docker_update_completions
-    set --local comp_path (dirname $PWD)"/completions"
+    set --local comp_path (status dirname)"/../completions"
     test ! -d $comp_path && command mkdir -p $comp_path
     echo "Downloading the docker completion files from official repo..."
 
@@ -163,7 +163,7 @@ function _fish-docker_uninstall --on-event fish-docker_uninstall
     abbr -e dkmv
     abbr -e dkmx
 
-    set --local comp_path (dirname $PWD)"/completions"
+    set --local comp_path (status dirname)"/../completions"
     rm "$comp_path"/docker.fish
     rm "$comp_path"/docker-compose.fish
 end
