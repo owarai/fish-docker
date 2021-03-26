@@ -9,7 +9,8 @@ function __fish-docker_update_completions
     test ! -d $comp_path && command mkdir -p $comp_path
     echo "Downloading the docker completion files from official repo..."
 
-    curl https://raw.githubusercontent.com/docker/cli/master/contrib/completion/fish/docker.fish >"$comp_path"/docker.fish
+    # not work currently.
+    #curl https://raw.githubusercontent.com/docker/cli/master/contrib/completion/fish/docker.fish >"$comp_path"/docker.fish
 
     curl https://raw.githubusercontent.com/docker/compose/master/contrib/completion/fish/docker-compose.fish >"$comp_path"/docker-compose.fish
 end
@@ -164,7 +165,7 @@ function _fish-docker_uninstall --on-event fish-docker_uninstall
     abbr -e dkmx
 
     set --local comp_path (status dirname)"/../completions"
-    rm "$comp_path"/docker.fish
+    #rm "$comp_path"/docker.fish
     rm "$comp_path"/docker-compose.fish
 end
 
