@@ -15,7 +15,18 @@ function __fish-docker_update_completions
     curl https://raw.githubusercontent.com/docker/compose/master/contrib/completion/fish/docker-compose.fish >"$comp_path"/docker-compose.fish
 end
 
+function _fish-docker_update --on-event fish-docker_update
+    __fish-docker_clear_abbrs
+end
+
 function _fish-docker_uninstall --on-event fish-docker_uninstall
+    __fish-docker_clear_abbrs
+    set --local comp_path (status dirname)"/../completions"
+    #rm "$comp_path"/docker.fish
+    rm "$comp_path"/docker-compose.fish
+end
+
+function __fish-docker_clear_abbrs
     abbr -e dk
     abbr -e dka
     abbr -e dkb
@@ -163,10 +174,6 @@ function _fish-docker_uninstall --on-event fish-docker_uninstall
     abbr -e dkmup
     abbr -e dkmv
     abbr -e dkmx
-
-    set --local comp_path (status dirname)"/../completions"
-    #rm "$comp_path"/docker.fish
-    rm "$comp_path"/docker-compose.fish
 end
 
 # Adapted from https://github.com/akarzim/zsh-docker-aliases
