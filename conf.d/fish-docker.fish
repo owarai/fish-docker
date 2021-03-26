@@ -1,6 +1,10 @@
 #!/usr/bin/env fish
 
 function _fish-docker_install --on-event fish-docker_install
+    __fish-docker_update_completions
+end
+
+function __fish-docker_update_completions
     set --local comp_path (dirname $PWD)"/completions"
     test ! -d $comp_path && command mkdir -p $comp_path
     echo "Downloading the docker completion files from official repo..."
