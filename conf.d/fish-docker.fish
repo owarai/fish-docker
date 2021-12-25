@@ -83,6 +83,7 @@ function __populate_docker_abbr
     __docker_add_abbr dkcls 'docker container ls'
     __docker_add_abbr dkclsa 'docker container ls -a'
     __docker_add_abbr dkcr 'docker container run'
+    __docker_add_abbr dkcrr 'docker container run --rm'
     __docker_add_abbr dkcri 'docker container run -it --rm'
     __docker_add_abbr dkcrie 'docker container run -it --rm --entrypoint /bin/bash'
     __docker_add_abbr dkcs 'docker container start'
