@@ -91,7 +91,7 @@ function __populate_docker_abbr
     __docker_add_abbr pv 'docker volume'
     __docker_add_abbr pvc 'docker volume create'
     __docker_add_abbr pvin 'docker volume inspect'
-    __docker_add_abbr pvl 'docker volume ls'
+    __docker_add_abbr pvls 'docker volume ls'
     __docker_add_abbr pvpr 'docker volume prune'
     __docker_add_abbr pvrm 'docker volume rm'
 
@@ -101,7 +101,7 @@ function __populate_docker_abbr
     __docker_add_abbr pnC 'docker network create'
     __docker_add_abbr pnd 'docker network disconnect'
     __docker_add_abbr pnin 'docker network inspect'
-    __docker_add_abbr pnl 'docker network ls'
+    __docker_add_abbr pnls 'docker network ls'
     __docker_add_abbr pnpr 'docker network prune'
     __docker_add_abbr pnrm 'docker network rm'
 
