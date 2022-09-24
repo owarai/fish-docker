@@ -141,6 +141,7 @@ function __populate_docker_abbr
     __docker_add_abbr csu 'docker service update'
 
     ## System (y)
+    __docker_add_abbr cy 'docker system'
     __docker_add_abbr cyd 'docker system df'
     __docker_add_abbr cye 'docker system events'
     __docker_add_abbr cyi 'docker system info'
