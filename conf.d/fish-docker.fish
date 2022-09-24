@@ -157,13 +157,13 @@ function __populate_docker_abbr
 
     ## CleanUp (rm)
     # Clean up exited containers.
-    __docker_add_abbr prmC 'docker container rm (docker container ls -qaf status=exited)'
+    __docker_add_abbr crmC 'docker container rm (docker container ls -qaf status=exited)'
 
     # Clean up dangling images.
-    __docker_add_abbr prmI 'docker image rm (docker image ls -qaf dangling=true)'
+    __docker_add_abbr crmI 'docker image rm (docker image ls -qaf dangling=true)'
 
     # Clean up dangling volumes.
-    __docker_add_abbr prmV 'docker volume rm (docker volume ls -qf dangling=true)'
+    __docker_add_abbr crmV 'docker volume rm (docker volume ls -qf dangling=true)'
 
     # docker Compose (dcp)
     __docker_add_abbr dp docker-compose
@@ -185,14 +185,14 @@ function __populate_docker_abbr
     __docker_add_abbr dpps 'docker-compose ps'
     __docker_add_abbr dppl 'docker-compose pull'
     __docker_add_abbr dpph 'docker-compose push'
-    __docker_add_abbr dpS 'docker-compose restart'
+    __docker_add_abbr dprs 'docker-compose restart'
     __docker_add_abbr dprm 'docker-compose rm'
     __docker_add_abbr dpr 'docker-compose run'
-    __docker_add_abbr dpR 'docker-compose run --rm'
+    __docker_add_abbr dprr 'docker-compose run --rm'
     __docker_add_abbr dps 'docker-compose start'
     __docker_add_abbr dpx 'docker-compose stop'
     __docker_add_abbr dpt 'docker-compose top'
-    __docker_add_abbr dpP 'docker-compose unpause'
+    __docker_add_abbr dpup 'docker-compose unpause'
     __docker_add_abbr dpu 'docker-compose up'
     __docker_add_abbr dpU 'docker-compose up -d'
 
